@@ -31,14 +31,13 @@ export default function Home() {
         }
       }
     };
-
+    fetchTestField()
   }, [user]);
 
   return (
     <main className='p-4'>
       <h1>Home</h1>
       <p>Testfield Value: {testfield}</p>
-      
     </main>
   );
 }

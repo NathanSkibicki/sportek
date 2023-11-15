@@ -53,8 +53,9 @@ const Navbar = () => {
             <img
                 src="https://static.vecteezy.com/system/resources/previews/013/362/731/original/tennis-ball-transparent-free-png.png"
                 alt=""
-                className="h-10 w-10" // Set the width and height of the image
+                className="h-10 w-10 mr-3" // Set the width and height of the image
             />
+            <h1 className='font-bold text-2xl'>Tennis Hub</h1>
         </div>
         
         {loading ? null : !user ? (<ul className='flex'>

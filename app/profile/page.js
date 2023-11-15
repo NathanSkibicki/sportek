@@ -61,12 +61,11 @@ const Page = () => {
     //adding items
     const addItem = async (e) => {
         e.preventDefault();
-        if (newItem.name !== "" && newItem.price !== '') {
+        if (newItem.name !== "") {
             await addDoc(collection(db, 'items'), {
-                name: newItem.name.trim(),
-                price: newItem.price,
+                testfield: newItem.testfield.trim(),
             });
-            setNewItem({ name: '', price: '' });
+            setNewItem({ testfield: '' });
         }
     };
 
@@ -83,12 +82,12 @@ const Page = () => {
             {user ? (
                 <main>
                     <div>
-                        <button>Change Username:</button>
+                        <button className="block text-black font-bold md:text-right mb-1 md:mb-0 pr-4">Change Username:</button>
                         <input
                             value={testfield}
                             onChange={handleTestFieldChange}
                             onKeyDown={handleEnterKey}
-                            className='text-black justify-center'
+                            className='bg-green-200 appearance-none border-2 border-green-400 rounded w-30 h-10 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-green-500 ml-2'
                             type="text"
                         />
                     </div>
@@ -101,7 +100,7 @@ const Page = () => {
                 <p>You must be logged in to view this page</p>
             )}
         </div>
-    );
+    );  
 };
 
 export default Page;
